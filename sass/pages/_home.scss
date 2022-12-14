@@ -1,0 +1,539 @@
+// ------- hero section -------
+.hero {
+    padding: 4rem 6rem;
+    height: 100%;
+
+    .dot-1 {
+        position: absolute;
+        right: 17rem;
+        top: 5.7rem;
+        width: .6rem;
+    }
+
+    &-cols {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+
+        &-1 {
+            position: relative;
+                
+            .desc {
+                font-size: .8rem;
+                line-height: 2;
+            }
+            
+            .Sparkle {
+                position: absolute;
+                top: -1.2rem;
+                left: -1.8rem;
+                width: 1.4rem;
+            }
+
+            .dot-2 {
+                position: absolute;
+                width: .5rem;
+                right: 8rem;
+                top: 1.5rem;
+            }
+        }
+
+        &-2 {
+            position: relative;
+
+            .hero-img {
+                width: 36rem;
+
+            }
+
+            .dot-3 {
+                position: absolute;
+                width: .6rem;
+                bottom: -2.5rem;
+                left: 13rem
+                
+            }
+        }
+
+    }
+    
+    &_title {
+        color: $color-primary;
+        font-weight: 500;
+        line-height: 3;
+        font-size: 1.2rem;
+    }
+
+    &_subtitle {
+        color: $color-secondary;
+        font-size: 2.3rem;
+        font-weight: 600;
+        position: relative;
+
+        img {
+            width: 7rem;
+        }
+
+        .line1 {
+            position: absolute;
+            top: 2.8rem;
+            right: 11rem;
+        }
+
+        .line2 {
+            width: 5rem;
+            position: absolute;
+            top: 6.3rem;
+            right: 19rem;
+        }
+
+        span {
+            color: $color-primary;
+        }   
+    }
+
+    .search {
+        width: 28rem;
+        outline: .1rem solid $color-graylight;
+        position: relative;
+        padding: .5rem .5rem;
+        border-radius: .3rem;
+        margin-top: 1rem;
+
+        input {
+            width: 91%;
+            border: none;
+            padding-left: .5rem;
+            font-size: .8rem;
+            font-weight: 500;
+
+            &::placeholder {
+                color: $color-gray;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .bi-search {
+            font-size: .9rem;
+            color: $color-gray;
+        }
+    }
+
+
+
+}
+
+// ------- courses section ------
+.courses {
+    padding-left: 6rem;
+    margin: 4rem 0;
+    padding: 3rem 0;
+    padding-left: 6rem;
+    background-color: $color-greenlight;
+    @include display;
+    gap: 5rem;
+    position: relative;
+
+    .title {
+        font-weight: 600;
+
+        .line3 {
+            position: absolute;
+            left: 0;
+            bottom: 3.2rem;
+            width: 8rem;
+        }
+    }
+
+    &_overley {
+        position: absolute;
+        right: 0;
+        height: 368px;
+        top: -3rem;
+        width: 15rem;
+        background: linear-gradient(to left, rgba($color-white, .7),  rgba($color-primary, 0) );
+        z-index: 20;
+        filter: blur(1px);
+    }
+
+    .course {
+        background-color: $color-white;
+        border: .1rem solid $color-graylight;
+        border-radius: .4rem;
+        overflow: hidden;
+        position: relative;
+        width: 14rem !important;
+        padding: 1rem;
+
+        &_category {
+            position: absolute;
+            top: 1.7rem;
+            left: 1.6rem;
+            background-color: $color-white;
+            padding: .2rem .6rem;
+            border-radius: .2rem;
+            opacity: .6;
+            font-size: .8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        img {
+            width: 100%;
+            max-height: 207px;
+        }
+
+        &_desc {
+            color: $color-gray;
+            font-size: .8rem;
+            font-weight: 500;
+            letter-spacing: .5px;
+            line-height: 3;
+        }
+
+        &_rating {
+            @include display;
+            gap: .7rem;
+            color: $color-gray;
+            padding-bottom: .6rem;
+            width: 100%;
+            border-bottom: .1rem solid $color-graylight;
+
+            .stars {
+                @include display;
+                gap: .4rem;
+
+                .bi-star-fill {
+                    color: $color-third;
+                }
+            }
+
+            .rating_txt {
+                font-size: .9rem;
+            }
+        }
+
+        &_price {
+            margin-top: 1rem;
+            @include display;
+            justify-content: space-between;
+
+            .price_txt {
+                font-weight: 500;
+                color: $color-secondary;
+            }
+        }   
+
+    }
+}
+
+// ------- Categoties ------
+.categories {
+    padding: 0 6rem;
+    padding-bottom: 4rem;
+
+    .title {
+
+        .line4 {
+            position: absolute;
+            bottom: .1rem;
+            left: 5.5rem;
+            height: .6rem;
+        }
+    }
+
+    &_container {
+        @include display;
+        flex-wrap: wrap;
+        gap: 1.3rem;
+        position: relative;
+        width: 100%;
+        margin-top: 2.7rem;
+    }
+
+    .category {
+        @include display;
+        justify-content: space-between;
+        border: .1rem solid $color-graylight;
+        // @include box-shodow2;
+        width: 13.5rem;
+        padding: 1rem 1rem;
+        border-radius: .4rem;
+
+        &:hover {
+            outline: .1rem solid $color-primary;
+            box-shadow: rgba(#20b4857b, .1) 0px 3px 8px;
+        }
+
+        &:hover > .bi-arrow-up-right {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+
+        .bi-arrow-up-right {
+            color: $color-primary;
+            font-weight: 500;
+            transition: all .2s ease-in;         
+        }
+
+        &_symbole {
+            @include display;
+            gap: .9rem;
+            font-size: .9rem;
+            font-weight: 500;
+            color: $color-secondary;
+
+            img {
+                width: 2rem;
+            }
+        }
+    }
+}
+
+// ----- Instructors Section ------
+.instructors {
+    padding: 4rem 0;
+    padding-left: 6rem;
+    background-color: $color-orangelight;
+    position: relative;
+
+    .title {
+
+        img {
+            position: absolute;
+            width: 9rem;
+            left: 9rem;
+            bottom: -.1rem;
+        }
+    }
+
+    &_container {
+        // gap: 1rem !important;
+        margin-top: 2.7rem;
+    }
+    
+    .instructor {
+        border: .1rem solid $color-graylight;
+        background-color: $color-white;
+        width: 13rem !important;
+        padding: .8rem;
+        // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        border-radius: .4rem;
+        overflow: hidden;
+        position: relative;
+
+        &_name {
+            text-align: center;
+            font-weight: 500;
+            margin-top: .3rem;
+        }
+
+        &_job {
+            text-align: center;
+            color: $color-gray;
+            font-size: .8rem;
+            margin-top: .5rem;
+        }
+
+        img {
+            width: 100%;
+            height: 12rem;
+            border-radius: .5rem;
+        }
+    }
+}
+
+// ----- achievements secrion -----
+.achievements {
+    padding: 4rem 6rem;
+
+    .title {
+
+        .line6 {
+            position: absolute;
+            left: 6rem;
+            bottom: -.3rem;
+            width: 11rem;
+        }
+    }
+
+    &_cols {
+        @include display;
+        // gap: 10rem;
+        position: relative;
+
+        &-1 {
+            width: 33rem;
+            margin-top: 5rem;
+            @include display;
+            justify-content: space-between;
+
+            .teachers, .students, .videos, .users {
+                @include display;
+                gap: 1.2rem;
+                margin-bottom: 3rem;
+
+                img {
+                    padding: .5rem;
+                    background-color: $color-greenlight;
+                    border-radius: .4rem;
+                }
+
+                .quantity {
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                    color: $color-secondary;
+                }
+
+                .type {
+                    color: $color-gray;
+                    font-size: 1.1rem;
+                }
+            }
+
+            .students {
+
+                img {
+                    background-color: $color-redlight;
+                }
+            }
+
+            .videos {
+
+                img {
+                    background-color: $color-orangelight;
+                }
+            }
+
+            .users {
+
+                img {
+                    background-color: $color-bluelight;
+                }
+            }
+        }
+
+        &-2 {
+            position: absolute;
+            right: 2rem;
+
+            .achievement-img {
+                // top: -10rem;
+                // left: 10rem;
+            }
+        }
+    }
+}
+
+// ----- Feedback Section -----
+.feedbacks {
+    padding: 4rem 6rem;
+
+    .title {
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: -.2rem;
+            left: 8rem;
+        }
+    }
+
+    &_container {
+        margin-top: 3rem;
+        @include display;
+        gap: 2rem;
+
+        .feedback {
+            background-color: $color-white;
+            border: .1rem solid $color-graylight;
+            border-radius: .8rem;
+            box-shadow: rgba(0, 0, 0, 0.023) 0px 10px 30px;
+            width: 31rem;
+            overflow: hidden;
+            padding: 2rem;
+            position: relative;
+
+            .quote {
+                position: absolute;
+                right: 1.5rem;
+                top: .5rem;
+                width: 44px !important;
+                height: 31.84px !important;
+            }
+
+            .profile {
+                @include display;
+                gap: 1rem;
+
+                &_name {
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    color: $color-secondary;
+                }
+
+                &_job {
+                    font-size: .9rem;
+                    font-weight: 500;
+                    color: $color-secondary;
+                }
+
+
+                img {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: 50%;
+                }
+            }
+            
+            &_desc {
+                margin-top: 1.5rem;
+                color: rgba($color-secondary, .7);
+                font-size: .8rem;
+                font-weight: 500;
+
+                p:last-child {
+                    margin-top: 1rem;
+                }
+
+            }
+        }
+    }
+    
+}
+
+// ----- Banner Section -----
+.banner {
+    padding: 2rem 6rem;
+    background-color: $color-greenlight;
+
+    .title {
+        font-weight: 600;
+    }
+
+    &_subtitle {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+
+    }
+
+    .button--green {
+        margin-top: 2rem;
+        
+    }
+
+    &-cols {
+        @include display;
+        justify-content: space-between;
+
+        &-1 {
+
+            img {
+                width: 35rem;
+            }
+        }
+    }
+}

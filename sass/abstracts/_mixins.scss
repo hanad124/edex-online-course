@@ -1,0 +1,22 @@
+@mixin display {
+    display: flex;
+    align-items: center;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin transition {
+    transition: all .2s ease-in-out;
+}
+
+@mixin box-shodow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+@mixin box-shodow2 {
+    box-shadow: rgba(0, 0, 0, 0.059) 0px 3px 8px;
+}

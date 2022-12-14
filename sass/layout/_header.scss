@@ -1,0 +1,63 @@
+.header {
+    padding: 1rem 0;
+    border-bottom: .1rem solid $color-graylight;
+
+    .navigation {
+        @include display;
+        justify-content: space-around;
+
+        .nav1 {
+            @include display;
+            gap: 2rem;
+            
+            li {
+                font-size: .9rem;
+                font-weight: 500;
+                list-style: none;
+                position: relative;
+                cursor: pointer;
+                color: $color-gray;
+
+                &:hover {
+                    color: $color-primary;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -.2rem;
+                    width: 0%;
+                    height: 2px;
+                    background-color: $color-primary;
+                    border-radius: .3rem;
+                    @include transition;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .nav2 {
+            @include display;
+            gap: 1.2rem;
+
+            .login {
+                font-size: .9rem;
+                font-weight: 500;
+                @include display;
+                gap: .5rem;
+                color: $color-gray;
+                cursor: pointer;
+
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+}
+

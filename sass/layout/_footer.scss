@@ -1,0 +1,118 @@
+.footer {
+    padding: 3rem 6rem;
+
+    &_cols {
+        display: flex;
+        justify-content: space-between;
+
+        &-1 {
+
+            .col_title {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: $color-secondary;
+                margin-top: 1rem;
+            }
+            
+            .call {
+                margin-top: .5rem;
+                color: $color-gray;
+                font-size: .8rem;
+            } 
+
+            .address1, .address2, .email {
+                color: $color-gray;
+                font-size: .8rem;
+                margin-top: .4rem;
+            }
+            
+            .email {
+                color: $color-secondary;
+
+                span {
+                    font-weight: 500;
+                }
+            }
+
+            .social_mediaLinks {
+                margin-top: .7rem;
+                @include display;
+                gap: 1rem;
+
+                .bi {
+                    background-color: $color-greenlight;
+                    color: $color-primary;
+                    padding: .3rem .5rem;
+                    border-radius: .3rem;
+                    cursor: pointer;
+                    @include transition;
+
+                    &:hover {
+                        transform: scale(1.08);
+                        color: $color-third;
+                        background-color: $color-orangelight;
+                    }
+                }
+            }
+        }
+
+        .col_title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: $color-secondary;
+        }
+
+        .col_desc {
+            color: $color-gray;
+            font-size: .8rem;
+            width: 18rem;
+            margin-top: 1rem;
+        }
+
+        .subsctibe {
+            width: 16rem;
+            height: 2.6rem;
+            padding: 0 .5rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: .3rem;
+            background-color: rgba($color: $color-graylight, $alpha: 0.5);
+            outline: .1rem solid $color-graylight;
+
+            &:focus {
+                outline: .2rem solid rgba(9, 173, 9, 0.233);
+                background-color: $color-greenlight;
+            }
+
+            &:focus:invalid {
+                outline: .2rem solid #f3738245;
+                background-color: #f3738218;
+            }
+        }
+
+        .subcribe_btn {
+            margin-top: 1.5rem;
+        }
+
+        ul {
+            margin-top: 1rem;
+
+            li {
+                list-style: none;
+                color: $color-gray;
+                font-size: .8rem;
+                cursor: pointer;
+                @include transition;
+
+                &:hover {
+                    transform: scale(1.02);
+                    color: $color-secondary;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+}
