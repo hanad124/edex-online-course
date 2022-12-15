@@ -1,0 +1,21 @@
+// Move In Bottom
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+// Move In Right
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}

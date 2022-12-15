@@ -27,6 +27,20 @@ body {
   border-radius: 3rem;
   background-color: #20B486; }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    transform: translate(0); } }
+
 .header {
   padding: 1rem 0;
   border-bottom: 0.1rem solid #E7E9EB; }
